@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year and Semester Selection</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        /* Box Styling */
+        .form-box {
+            width: 500px;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        /* Title */
+        .form-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #333;
+        }
+        /* Button Styling */
+        .form-box button {
+            background-color: #6e8efb;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+            margin: 10px;
+            width: 100%;
+        }
+        .form-box button:hover {
+            background-color: #a777e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Year and Semester Selection</h2>
+        <!-- Buttons for each year and semester -->
+        <button onclick="navigateTo('course1-1.html')">I YEAR - I SEM</button>
+        <button onclick="navigateTo('course1-2.html')">I YEAR - II SEM</button>
+        <button onclick="navigateTo('course2-1.html')">II YEAR - I SEM</button>
+        <button onclick="navigateTo('course2-2.html')">II YEAR - II SEM</button>
+        <button onclick="navigateTo('course3-1.html')">III YEAR - I SEM</button>
+        <button onclick="navigateTo('course3-2.html')">III YEAR - II SEM</button>
+        <button onclick="navigateTo('course4-1.html')">IV YEAR - I SEM</button>
+        <button onclick="navigateTo('course4-2.html')">IV YEAR - II SEM</button>
+        <script>
+            function navigateTo(coursePage) {
+                // This function will navigate to the corresponding course page
+                window.location.href = coursePage;
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty List</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <style>
+        /* Additional styles for background and layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .faculty-box {
+            width: 400px; /* Set the width of the box */
+            padding: 20px; /* Add padding inside the box */
+            background: white; /* Box background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+            text-align: center; /* Center text inside the box */
+        }
+
+        h2 {
+            color: #333; /* Header color */
+            margin-bottom: 20px; /* Space below the header */
+        }
+
+        ul {
+            list-style: none; /* Remove default list styles */
+            padding: 0; /* Remove padding */
+            text-align: left; /* Align text to the left */
+        }
+
+        li {
+            margin: 10px 0; /* Space between list items */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: #6e8efb; /* Link color */
+            font-size: 18px; /* Font size for links */
+            transition: color 0.3s ease; /* Transition effect for hover */
+        }
+
+        a:hover {
+            color: #a777e3; /* Color change on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faculty-box">
+        <h2>Select a Faculty</h2>
+        <ul id="faculty-list">
+            <li><a href="faculty_profile.html?faculty=1">Mr. B. Bhaskara Rao</a></li>
+            <li><a href="faculty_profile.html?faculty=2">Dr. K. Rangaswamy</a></li>
+            <li><a href="faculty_profile.html?faculty=3">Dr. S. Karimulla Basha</a></li>
+            <li><a href="faculty_profile.html?faculty=4">Dr. P. Penchal Prasad</a></li>
+            <li><a href="faculty_profile.html?faculty=5">Ms. M. Lakshmi Prasanna</a></li>
+            <li><a href="faculty_profile.html?faculty=6">Mr. G. Viswanth</a></li>
+            <li><a href="faculty_profile.html?faculty=7">Mr. Shaik Khaleel</a></li>
+            <li><a href="faculty_profile.html?faculty=8">Mr. Shaik Mahamad Shakeer</a></li>
+            <li><a href="faculty_profile.html?faculty=9">Mrs. K. Samunnisa</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

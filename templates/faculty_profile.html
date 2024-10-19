@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        /* Additional styles for background and layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-box {
+            width: 400px; /* Set the width of the profile box */
+            padding: 20px; /* Add padding inside the box */
+            background: white; /* Box background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+            text-align: center; /* Center text inside the box */
+        }
+
+        h2 {
+            color: #333; /* Header color */
+            margin-bottom: 20px; /* Space below the header */
+        }
+
+        p {
+            color: #666; /* Paragraph color */
+            margin: 5px 0; /* Space between paragraphs */
+        }
+
+        select {
+            width: 100%; /* Full width for the select element */
+            padding: 10px; /* Padding for the select element */
+            margin: 20px 0; /* Margin around the select element */
+            border-radius: 5px; /* Rounded corners for the select */
+            border: 1px solid #ccc; /* Border color */
+        }
+
+        button {
+            padding: 10px 20px; /* Button padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #6e8efb; /* Button background color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #a777e3; /* Change background color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-box">
+        <h2 id="faculty-name"><i class="icon fas fa-user"></i></h2>
+        <div id="faculty-parameters"></div>
+        
+        <select id="select-faculty">
+            <option value="">Select this Faculty</option>
+            <option value="1">Select Mr. B. Bhaskara Rao</option>
+            <option value="2">Select Dr. K. Rangaswamy</option>
+            <option value="3">Select Dr. S. Karimulla Basha</option>
+            <option value="4">Select Dr. P. Penchal Prasad</option>
+            <option value="5">Select Ms. M. Lakshmi Prasanna</option>
+            <option value="6">Select Mr. G. Viswanth</option>
+            <option value="7">Select Mr. Shaik Khaleel</option>
+            <option value="8">Select Mr. Shaik Mahamad Shakeer</option>
+            <option value="9">Select Mrs. K. Samunnisa</option>
+        </select>
+        
+        <button onclick="selectFaculty()">Select Faculty</button>
+        <button id="next-button" style="display:none;" onclick="goToFeedback()">Next</button>
+    </div>
+
+    <script>
+        const facultyProfiles = {
+            1: { name: "Mr. B. Bhaskara Rao", ratings: "4.5", researchProjects: "5", patents: "2", academicBackground: "M.Tech, Ph.D" },
+            2: { name: "Dr. K. Rangaswamy", ratings: "4.7", researchProjects: "3", patents: "1", academicBackground: "M.Tech, Ph.D" },
+            3: { name: "Dr. S. Karimulla Basha", ratings: "4.3", researchProjects: "2", patents: "0", academicBackground: "M.Tech, Ph.D" },
+            4: { name: "Dr. P. Penchal Prasad", ratings: "4.6", researchProjects: "4", patents: "1", academicBackground: "M.Tech, Ph.D" },
+            5: { name: "Ms. M. Lakshmi Prasanna", ratings: "4.8", researchProjects: "6", patents: "3", academicBackground: "M.Tech (Ph.D)" },
+            6: { name: "Mr. G. Viswanth", ratings: "4.0", researchProjects: "1", patents: "0", academicBackground: "M.Tech" },
+            7: { name: "Mr. Shaik Khaleel", ratings: "4.1", researchProjects: "2", patents: "0", academicBackground: "M.Tech" },
+            8: { name: "Mr. Shaik Mahamad Shakeer", ratings: "4.2", researchProjects: "3", patents: "1", academicBackground: "M.Tech (Ph.D)" },
+            9: { name: "Mrs. K. Samunnisa", ratings: "4.4", researchProjects: "5", patents: "2", academicBackground: "M.Tech (Ph.D)" },
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const facultyId = params.get('faculty');
+
+        if (facultyId && facultyProfiles[facultyId]) {
+            const faculty = facultyProfiles[facultyId];
+            document.getElementById('faculty-name').innerText = faculty.name;
+            document.getElementById('faculty-parameters').innerHTML = `
+                <p>Ratings: ${faculty.ratings}</p>
+                <p>Research Projects: ${faculty.researchProjects}</p>
+                <p>Patents: ${faculty.patents}</p>
+                <p>Academic Background: ${faculty.academicBackground}</p>
+            `;
+        }
+
+        function selectFaculty() {
+            const selectedFaculty = document.getElementById('select-faculty').value;
+            if (selectedFaculty) {
+                localStorage.setItem('selectedFaculty', selectedFaculty);
+                document.getElementById('next-button').style.display = 'block'; // Show Next button
+            } else {
+                alert('Please select a faculty to continue.');
+            }
+        }
+
+        function goToFeedback() {
+            window.location.href = 'https://hmmedia05.wixstudio.io/my-site-1'; // Redirect to feedback form
+        }
+    </script>
+
+</body>
+</html>

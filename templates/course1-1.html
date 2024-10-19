@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses for I YEAR - I SEM</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+
+        /* Box Styling */
+        .course-box {
+            width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative; /* Added for positioning the next button */
+        }
+
+        /* Title */
+        .course-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Course Sections Styling */
+        .course-section {
+            margin-bottom: 30px;
+        }
+
+        /* Course Titles */
+        .course-section h3 {
+            color: #6e8efb;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        /* Buttons Styling */
+        .course-list button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #6e8efb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-list button:hover {
+            background-color: #a777e3;
+        }
+
+        /* Next Button Styling */
+        .next-button {
+            position: absolute; /* Positioning for bottom right */
+            bottom: 20px; /* Distance from bottom */
+            right: 20px; /* Distance from right */
+            padding: 10px 20px;
+            background-color: #6e8efb; /* Same color as other buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-button:hover {
+            background-color: #a777e3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="course-box">
+        <h2>COURSES FOR I YEAR - I SEM</h2>
+
+        <!-- Theory Courses Section -->
+        <div class="course-section">
+            <h3>Theory Courses</h3>
+            <div class="course-list">
+                <button onclick="window.location.href='faculty_list.html?course=C_programming'">Faculty for C Programming</button>
+                <button onclick="window.location.href='faculty_list.html?course=Physics'">Faculty for Physics</button>
+                <button onclick="window.location.href='faculty_list.html?course=Mathematics'">Faculty for Mathematics</button>
+                <button onclick="window.location.href='faculty_list.html?course=Engineering_Drawing'">Faculty for Engineering Drawing</button>
+                <button onclick="window.location.href='faculty_list.html?course=BEE'">Faculty for BEE</button>
+            </div>
+        </div>
+
+        <!-- Lab Courses Section -->
+        <div class="course-section">
+            <h3>Lab Courses</h3>
+            <div class="course-list">
+                <button onclick="window.location.href='faculty_list.html?course=C_Lab'">Faculty for C Lab</button>
+                <button onclick="window.location.href='faculty_list.html?course=IT_Workshop'">Faculty for IT Workshop</button>
+                <button onclick="window.location.href='faculty_list.html?course=Engineering_Workshop'">Faculty for Engineering Workshop</button>
+            </div>
+        </div>
+
+        <!-- Feedback Form Button -->
+        <button class="next-button" onclick="window.location.href='https://hmmedia05.wixstudio.io/my-site-1'">Next</button>
+    </div>
+
+</body>
+</html>
